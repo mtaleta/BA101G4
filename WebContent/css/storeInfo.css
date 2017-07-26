@@ -1,0 +1,54 @@
+@charset "utf-8";
+
+#storeName{
+	font-size:20px;
+	font-weight:bold;
+}
+
+#detailInfo div div{
+	margin-bottom: 1px;
+	color:#808080;
+}
+
+#contact{
+	margin-top: 10px;
+	font-size:15px;
+	color:#a6a6a6;
+}
+
+#operatingHour div{
+	margin: 0px 12px;
+	color:#808080;
+}
+
+.body h4{
+	margin: 0px 12px;
+	margin-bottom: 12px;
+}
+
+#light hr{
+	margin:15px;
+	font-weight:bold;
+	border-top: 1px solid #ccc;
+}
+
+#dropZoneBlock {
+	border:1px solid #ccc;
+	border-radius:5px;
+	width:auto;
+	left:5%;
+	height:auto;
+	display:none;
+}
+
+#dropZone {
+/* 	border:1px solid #ccc; */
+	margin: 15px;
+	width:auto;
+	height:200px;
+	text-align:center;
+}
+
+.store-name{
+	font-size:20px;
+}

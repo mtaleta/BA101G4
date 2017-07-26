@@ -1,0 +1,40 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="Big5"%>  
+<div class="col-xs-12"> 
+	<div class="text-center">
+		<ul class="pagination pagination-lg">
+		<%if (rowsPerPage<rowNumber) {%>
+			<%if(pageIndex>=rowsPerPage){%>
+	        	<li><a href="<%=request.getContextPath()%>/frontend/category/category.do?whichPage=<%=whichPage-1%>&action=listLaunchedProductsByCate_idDesc&cate_id=<%=request.getParameter("cate_id")%>">&laquo;</a></li>
+			<%}%>
+			<%if(whichPage - 3 >= 1){%>
+	        	<li><a href="<%=request.getContextPath()%>/frontend/category/category.do?whichPage=<%=whichPage-3%>&action=listLaunchedProductsByCate_idDesc&cate_id=<%=request.getParameter("cate_id")%>"><%=whichPage-3%></a></li>
+			<%}%>
+			
+			<%if(whichPage - 2 >= 1){%>
+	        	<li><a href="<%=request.getContextPath()%>/frontend/category/category.do?whichPage=<%=whichPage-2%>&action=listLaunchedProductsByCate_idDesc&cate_id=<%=request.getParameter("cate_id")%>"><%=whichPage-2%></a></li>
+			<%}%>
+			
+			<%if(whichPage - 1 >= 1){%>
+	        	<li><a href="<%=request.getContextPath()%>/frontend/category/category.do?whichPage=<%=whichPage-1%>&action=listLaunchedProductsByCate_idDesc&cate_id=<%=request.getParameter("cate_id")%>"><%=whichPage-1%></a></li>
+			<%}%>
+	
+	        <li class="active"><a href="#"><%=whichPage%></a></li>
+	
+			<%if(whichPage + 1 <= pageNumber){%>
+	        	<li><a href="<%=request.getContextPath()%>/frontend/category/category.do?whichPage=<%=whichPage+1%>&action=listLaunchedProductsByCate_idDesc&cate_id=<%=request.getParameter("cate_id")%>"><%=whichPage+1%></a></li>
+			<%}%>
+			
+			<%if(whichPage + 2 <= pageNumber){%>
+	        	<li><a href="<%=request.getContextPath()%>/frontend/category/category.do?whichPage=<%=whichPage+2%>&action=listLaunchedProductsByCate_idDesc&cate_id=<%=request.getParameter("cate_id")%>"><%=whichPage+2%></a></li>
+			<%}%>
+			
+			<%if(whichPage + 3 <= pageNumber){%>
+	        	<li><a href="<%=request.getContextPath()%>/frontend/category/category.do?whichPage=<%=whichPage+3%>&action=listLaunchedProductsByCate_idDesc&cate_id=<%=request.getParameter("cate_id")%>"><%=whichPage+3%></a></li>
+			<%}%>
+			<%if(pageIndex<pageIndexArray[pageNumber-1]){%>
+				<li><a href="<%=request.getContextPath()%>/frontend/category/category.do?whichPage=<%=whichPage+1%>&action=listLaunchedProductsByCate_idDesc&cate_id=<%=request.getParameter("cate_id")%>">&raquo;</a></li>
+	    	<%}%>
+		<%}%>
+		</ul>
+	</div>
+</div>

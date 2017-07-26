@@ -1,0 +1,170 @@
+body {
+    font-family: Microsoft Yahei, Arial, Helvetica, sans-serif, serif;
+    position: relative;
+}
+
+
+
+.width100{
+    width: 100%;
+}
+
+.float-left {
+    float: left;
+}
+
+.margin5px {
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-bottom:8px;
+
+}
+
+.logo{
+    margin-right: 15px;
+}
+.store .product {
+    border: 1px #ccc solid;
+    width: 100%;
+}
+
+.CoffeePuzzle {
+    padding: 10px;
+    width: 100%;
+    background-image: url(../img/spnd.jpg);
+    /*-webkit-filter:blur(25px);*/
+    /*-webkit-filter: opacity(.3);*/
+        /*-webkit-filter: brightness(.7);*/
+}
+
+.findProduct {
+    border: 1px #ccc solid;
+    padding: 5px;
+    margin-bottom: 10px;
+    /*background-color: #8B0000;*/
+}
+
+.findProduct .product-info {
+    float: left;
+    color: #949499;
+}
+.name{
+    color: #0066cc;
+    font-size: 16px;
+}
+
+.findProduct .score {
+    color: #ffaa00;
+}
+
+#cartList {
+    border: 1px #ccc solid;
+    padding: 0px;
+    margin-bottom: 0px;
+    border-radius: 10px;
+}
+
+h5, #addNewItem, #test {
+    padding: 5px 10px;
+    margin: 10px;
+}
+
+.itemList {
+    border-bottom: 1px #ccc solid;
+    padding: 5px 10px;
+    margin: 10px;
+}
+
+#list {
+    padding-top: 10px;
+    margin-top: 50px;
+
+}
+
+.tag-list {
+    padding-left: 0;
+    list-style: none;
+}
+
+.tag-list li {
+    float: none;
+}
+
+.header-btn .btn {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#addStore a {
+    width: 100%;
+}
+
+.btn-custo {
+  color: #fff;
+  background-color: #aaa;
+  /*border-color: #fff;*/
+}
+
+.btn-custo:hover {
+  color: #aaa;
+  background-color: #fff;
+  border-color: #aaa;
+}
+
+@media (min-width: 768px) {
+    #addStore {
+        text-align: right;
+    }
+    #addStore a {
+        width: auto;
+    }
+/*瘣餃��*/
+    .list .padding-right {
+        padding-right: 0;
+    }
+    .list .padding-left {
+        padding-left: 0;
+    }
+/*瘣餃��*/
+    .store .padding-right {
+        padding-right: 0;
+    }
+    .store .padding-left {
+        padding-left: 0;
+    }
+    .CoffeePuzzle {
+        padding: 30px;
+    }
+    .step img {
+        width: 70px;
+    }
+    .begin-spnd {
+        float: none;
+    }
+    .header-btn .btn {
+        width: auto;
+    }
+    .tag-list li {
+        float: left;
+        margin-right: 10px;
+    }
+
+}
+
+@media (min-width: 992px) {
+    .step img {
+        width: 100px;
+    }
+    .begin-spnd {
+        float: right;
+    }
+}
+
+@media (min-width: 1200px) {
+    .CoffeePuzzle {
+        padding: 100px;
+    }
+    .step img {
+        width: 150px;
+    }
+}

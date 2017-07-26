@@ -1,0 +1,13 @@
+.update_key{
+	min-width:120px;
+}
+.update_data{
+	min-width:120px;
+}
+input[type=text],input[type=email]{
+	width:220px;
+}
+
+input[type=radio]{
+	width:13px;
+}

@@ -1,0 +1,215 @@
+body {
+    font-family: Microsoft Yahei, Arial, Helvetica, sans-serif, serif;
+    position: relative;
+}
+
+.pagination a {
+    margin: 10px;
+}
+
+.float-left {
+    float: left;
+}
+
+.margin5px {
+    margin: 5px;
+}
+
+.fontSize16px{
+	font-size: 16px;
+}
+
+.fontSize20px{
+	font-size: 20px;
+}
+
+.colorRed {
+    color: red;
+}
+
+.time{
+	color: #aaa;
+}
+
+.prod_img img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.shopProduct {
+    border: 1px #ccc solid;
+    margin-bottom: 20px;
+}
+
+.shopProduct .prod_name {
+    font-size: 20px;
+}
+
+.shopProduct .logo {
+    width: 50px;
+    height: 50px;
+}
+
+.shopProduct .store_name{
+	line-height: 60px;
+}
+
+.shopProduct .prod_img{
+	height: 400px;
+}
+
+.theProduct{
+    margin-bottom: 20px;
+}
+
+.theProduct .prod_img{
+    height: 500px;
+    border: 1px #ccc solid;
+}
+
+.theProduct .prod_name {
+    font-size: 24px;
+    color: #969696;
+}
+
+.theProduct .colorRed {
+	font-size: 20px;
+    color: red;
+}
+
+.theProduct .store{
+	height: 500px;
+	border: 1px #ccc solid;
+}
+
+.theProduct .store_name{
+	font-size: 20px;
+}
+
+.theProduct .logo {
+    width: 100px;
+    height: 100px;
+}
+
+.questions{
+	background-color: #eee;
+}
+
+.questions p{
+	font-size: 20px;
+}
+
+.msg{
+	padding: 30px;
+	background-color: #eee;
+}
+
+.msg .msg_logo{
+    width: 50px;
+    height: 50px;
+}
+
+.msg .msg_member{
+	font-size: 20px;
+}
+
+.msg .msg_time{
+
+}
+
+.msg .msg_content{
+	font-size: 16px;
+	padding-top: 10px;
+	padding-left: 30px;
+}
+
+.reply{
+	padding-top: 10px;
+	padding-left: 40px;
+}
+
+.reply .reply_logo{
+    width: 45px;
+    height: 45px;
+}
+
+.reply .reply_member{
+	font-size: 16px;
+}
+
+.reply .reply_time{
+
+}
+
+.reply .reply_content{
+	font-size: 14px;
+	padding-top: 10px;
+	padding-left: 30px;
+}
+
+.carts .logo {
+    width: 50px;
+    height: 50px;
+}
+
+.carts .store_name{
+	line-height: 60px;
+}
+
+.carts .cart{
+	border: 1px #ccc solid;
+}
+
+.carts .prod_name {
+    font-size: 20px;
+}
+
+.carts .prod_img{
+	height: 200px;
+}
+
+#card_nos{
+	position: absolute;
+}
+
+#card_date{
+	position: absolute;
+}
+
+.card_no{
+	width: 24%;
+}
+
+.card_date{
+	width: 8%;
+}
+
+.card_sub{
+	display: none;
+}
+
+@media (min-width: 768px) {
+
+    .shopProduct .padding-right {
+        padding-right: 0;
+    }
+    .shopProduct .padding-left {
+        padding-left: 0;
+    }
+
+}
+
+@media (min-width: 992px) {
+
+	.card_no{
+		width: 21%;
+	}
+	
+	.card_date{
+		width: 7%;
+	}
+	
+	.card_sub{
+		display: inline;
+	}
+}

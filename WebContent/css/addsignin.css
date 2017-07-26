@@ -1,0 +1,98 @@
+@import url(https://fonts.googleapis.com/css?family=Exo:100,200,400);
+	@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300);
+
+	body{
+	margin: 0;
+	padding: 0;
+	background: #fff;
+
+	color: #000;
+	font-family: Arial;
+	font-size: 12px;
+	}
+	.body{
+		position: absolute;
+		top: -10px;
+		left: -20px;
+		right: -40px;
+		bottom: -400px;
+		width: auto;
+		height: auto;
+		background-image: url('../img/temp2/toa-heftiba-195458.jpg') ;
+		background-size: cover;
+		-webkit-filter: blur(5px);
+		z-index: -1;
+	}
+	.tab-group {
+	  list-style: none;
+	  padding: 0;
+	  margin: 0 0 50px 0;
+	}
+	.tab-group:after {
+	  content: "";
+	  display: table;
+	  clear: both;
+	}
+	.tab-group li a {
+	  display: block;
+	  text-decoration: none;
+	  padding: 15px;
+	  background: rgba(160, 179, 176, 0.25);
+	  color: #000;
+	  font-size: 20px;
+	  float: left;
+	  width: 200px;
+	  text-align: center;
+	  cursor: pointer;
+	  -webkit-transition: .5s ease;
+	  transition: .5s ease;
+	}
+
+	.tab-group li a:hover {
+	  background: #965f2e;
+	  color: #ffffff;
+	}
+	.tab-group .active a {
+	  background: #774820;
+	  color: #ffffff;
+	}
+	.tab-group li a.store{
+		color:#000;
+	}
+	.tab-group li a.store:hover{
+		color:#000;
+	}
+
+    .form-label-left{
+        width:150px !important;
+    }
+
+    .form-all{
+        margin:0px auto;
+        padding-top:0px;
+        width:590px;
+        color:#000 !important;
+        font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, sans-serif;
+        font-size:150%;
+    }
+	.form-sub-label{
+	color:#000 !important;
+	}
+
+    }
+/* CSS */
+.zipcode {
+    background-color: #c00;
+    color: #000;
+	height:25px;
+}
+.county {
+    background-color: #4169E1;
+    color: #fff;
+	height:25px;
+}
+.district {
+    background-color: #008000;
+    color: #fff;
+	height:25px;
+}

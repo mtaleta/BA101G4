@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>BA101G4_2</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <resource-ref>
+    <description>DB Connection</description>
+    <res-ref-name>jdbc/ba101g4DB</res-ref-name>
+    <res-type>javax.sql.DataSource</res-type>
+    <res-auth>Container</res-auth>
+  </resource-ref>
+  <filter>
+    <filter-name>characterEncodingFilter</filter-name>
+    <filter-class>com.filter.CharacterEncodingFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>characterEncodingFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <filter>
+    <filter-name>memberAuthFilter</filter-name>
+    <filter-class>com.filter.MemberAuthFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>memberAuthFilter</filter-name>
+    <url-pattern>/frontend/member/*</url-pattern>
+    
+    <url-pattern>/frontend/orderlist/order_mem.jsp</url-pattern>
+    <url-pattern>/frontend/orderlist/checkout.jsp</url-pattern>
+    
+    <url-pattern>/frontend/activity/activityErrorAdmin.jsp</url-pattern>
+    <url-pattern>/frontend/activity/addActivity.jsp</url-pattern>
+    <url-pattern>/frontend/activity/adminActivity.jsp</url-pattern>
+    <url-pattern>/frontend/activity/myActivity.jsp</url-pattern>
+    <url-pattern>/frontend/activity/participant.jsp</url-pattern>
+    <url-pattern>/frontend/activity/activityDetail.jsp</url-pattern>
+	<url-pattern>/frontend/activity/activityJoin.jsp</url-pattern>
+	<url-pattern>/frontend/activity/activityAddEnd.jsp</url-pattern>
+	<url-pattern>/frontend/activity/updateActivity.jsp</url-pattern>
+	
+	<url-pattern>/frontend/fav_store/listOfFavStore.jsp</url-pattern>
+	
+	<url-pattern>/frontend/spndcoffeelist/*</url-pattern>
+    <url-pattern>/frontend/spndcoffeercd/*</url-pattern>
+  </filter-mapping>
+  <filter>
+    <filter-name>storeAuthFilter</filter-name>
+    <filter-class>com.filter.StoreAuthFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>storeAuthFilter</filter-name>
+    <url-pattern>/frontend/store/addStore.jsp</url-pattern>
+    <url-pattern>/frontend/store/change_Store_Password.jsp</url-pattern>
+    <url-pattern>/frontend/store/forgetPasswrod.jsp</url-pattern>
+    <url-pattern>/frontend/store/listOneStore.jsp</url-pattern>
+    <url-pattern>/frontend/store/login_Store.jsp</url-pattern>
+    <url-pattern>/frontend/store/login-alreadyExist.jsp</url-pattern>
+    <url-pattern>/frontend/store/login-error.jsp</url-pattern>
+    <url-pattern>/frontend/store/login-errorAuth.jsp</url-pattern>
+    <url-pattern>/frontend/store/login-reject_storePass.jsp</url-pattern>
+    <url-pattern>/frontend/store/login-store_under_review.jsp</url-pattern>
+    <url-pattern>/frontend/store/login-storeAuthEmail_Check.jsp</url-pattern>
+    <url-pattern>/frontend/store/login-storeUnPass.jsp</url-pattern>
+    <url-pattern>/frontend/store/login-success.jsp</url-pattern>
+    <url-pattern>/frontend/store/logout_Store.jsp</url-pattern>
+    <url-pattern>/frontend/store/select_page.jsp</url-pattern>
+    <url-pattern>/frontend/store/update_store_input.jsp</url-pattern>
+    <url-pattern>/frontend/store/listSpndCoffeeByStore_id.jsp</url-pattern>
+    
+    <url-pattern>/frontend/orderlist/good_manage.jsp</url-pattern>
+    <url-pattern>/frontend/orderlist/order_owner.jsp</url-pattern>
+    
+    <url-pattern>/frontend/activity/storeActivity.jsp</url-pattern>
+    <url-pattern>/frontend/activity/activityStoreDetail.jsp</url-pattern>
+    
+    <url-pattern>/frontend/spndcoffee/addSpndcoffee.jsp</url-pattern>
+    <url-pattern>/frontend/spndcoffee/updateSpndcoffee.jsp</url-pattern>
+
+  </filter-mapping>
+  <filter>
+    <filter-name>adminAuthFilter</filter-name>
+    <filter-class>com.filter.AdminAuthFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>adminAuthFilter</filter-name>
+    <url-pattern>/backend/admin/*</url-pattern>
+  </filter-mapping>
+  <servlet>
+    <servlet-name>AdminServlet</servlet-name>
+    <servlet-class>com.admin.controller.AdminServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminServlet</servlet-name>
+    <url-pattern>/backend/admin/admin.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>MemberFrontendServlet</servlet-name>
+    <servlet-class>com.member.controller.MemberServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MemberFrontendServlet</servlet-name>
+    <url-pattern>/frontend/member/member.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>MemberBackendServlet</servlet-name>
+    <servlet-class>com.member.controller.MemberServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MemberBackendServlet</servlet-name>
+    <url-pattern>/backend/member/member.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>StoreFrontendServlet</servlet-name>
+    <servlet-class>com.store.controller.StoreServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StoreFrontendServlet</servlet-name>
+    <url-pattern>/frontend/store/store.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>StoreBackendServlet</servlet-name>
+    <servlet-class>com.store.controller.StoreServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StoreBackendServlet</servlet-name>
+    <url-pattern>/backend/store/store.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>FeatureServlet</servlet-name>
+    <servlet-class>com.feature.controller.FeatureServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FeatureServlet</servlet-name>
+    <url-pattern>/backend/feature/feature.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>participantServlet</servlet-name>
+    <servlet-class>com.participant.controller.ParticipantServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>participantServlet</servlet-name>
+    <url-pattern>/frontend/participant/participant.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>rept_activServlet</servlet-name>
+    <servlet-class>com.rept_activ.controller.Rept_activServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>rept_activServlet</servlet-name>
+    <url-pattern>/frontend/rept_activ/rept_activ.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ActivityServlet</servlet-name>
+    <servlet-class>com.activity.controller.ActivityServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ActivityServlet</servlet-name>
+    <url-pattern>/frontend/activity/activity.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>SpndcoffeeServlet</servlet-name>
+    <servlet-class>com.spndcoffee.controller.SpndcoffeeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SpndcoffeeServlet</servlet-name>
+    <url-pattern>/spndcoffee/spndcoffee.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>SpndcoffeelistServlet</servlet-name>
+    <servlet-class>com.spndcoffeelist.controller.SpndcoffeelistServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SpndcoffeelistServlet</servlet-name>
+    <url-pattern>/spndcoffeelist/spndcoffeelist.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>SpndcoffeercdServlet</servlet-name>
+    <servlet-class>com.spndcoffeercd.controller.SpndcoffeercdServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SpndcoffeercdServlet</servlet-name>
+    <url-pattern>/spndcoffeercd/spndcoffeercd.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Store_tagServlet</servlet-name>
+    <servlet-class>com.store_tag.controller.Store_tagServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Store_tagServlet</servlet-name>
+    <url-pattern>/store/store_tag.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Rate_n_revServlet</servlet-name>
+    <servlet-class>com.rate_n_rev.controller.Rate_n_revServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Rate_n_revServlet</servlet-name>
+    <url-pattern>/rate_n_rev/rate_n_rev.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>TagServlet</servlet-name>
+    <servlet-class>com.tag.controller.TagServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TagServlet</servlet-name>
+    <url-pattern>/tag/tag.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Fav_storeServlet</servlet-name>
+    <servlet-class>com.fav_store.controller.Fav_storeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Fav_storeServlet</servlet-name>
+    <url-pattern>/fav_store/fav_store.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>NewsServlet</servlet-name>
+    <servlet-class>com.news.controller.NewsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>NewsServlet</servlet-name>
+    <url-pattern>/news/news.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>AdvertismentServlet</servlet-name>
+    <servlet-class>com.advertisment.controller.AdvertismentServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdvertismentServlet</servlet-name>
+    <url-pattern>/backend/advertisment/advertisment.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description>
+	</description>
+    <servlet-name>DBImgReader</servlet-name>
+    <servlet-class>com.tools.DBImgReader</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DBImgReader</servlet-name>
+    <url-pattern>/images</url-pattern>
+  </servlet-mapping>
+  
+  
+<!--   Start : Adding by Sylvie -->
+
+  <servlet>
+    <servlet-name>MyEchoServer</servlet-name>
+    <servlet-class>com.sylvie.serverendpoint.MyEchoServer</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MyEchoServer</servlet-name>
+    <url-pattern>/frontend/serverendpoint/serverendpoint.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>OrderlistServlet</servlet-name>
+    <servlet-class>com.orderlist.controller.OrderlistServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OrderlistServlet</servlet-name>
+    <url-pattern>/frontend/orderlist/orderlist.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>OrderdetailServlet</servlet-name>
+    <servlet-class>com.orderdetail.controller.OrderdetailServlet</servlet-class>
+  </servlet>
+    <servlet-mapping>
+    <servlet-name>OrderdetailServlet</servlet-name>
+    <url-pattern>/frontend/orderdetail/orderdetail.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+  	<servlet-name>CategoryServlet</servlet-name>
+  	<servlet-class>com.category.controller.CategoryServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<description>
+  	</description>
+  	<display-name>ProductServlet</display-name>
+  	<servlet-name>ProductServlet</servlet-name>
+  	<servlet-class>com.product.controller.ProductServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<description>
+  	</description>
+  	<display-name>Photo_storeServlet</display-name>
+  	<servlet-name>Photo_storeServlet</servlet-name>
+  	<servlet-class>com.photo_store.controller.Photo_storeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>CategoryServlet</servlet-name>
+  	<url-pattern>/frontend/category/category.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ProductServlet</servlet-name>
+  	<url-pattern>/frontend/product/product.do</url-pattern>
+  </servlet-mapping>
+  
+  
+	<servlet-mapping>
+		<servlet-name>Photo_storeServlet</servlet-name>
+		<url-pattern>/frontend/photo_store/photo_store.do</url-pattern>
+	</servlet-mapping>
+	
+<!--  End :  Adding by Sylvie -->
+
+	<!-- 強禾 -->
+
+	<servlet>
+		<servlet-name>backendCategoryServlet</servlet-name>
+		<servlet-class>com.category.controller.CategoryServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>backendCategoryServlet</servlet-name>
+		<url-pattern>/backend/category/category.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>MsgServlet</servlet-name>
+		<servlet-class>com.msg.controller.MsgServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MsgServlet</servlet-name>
+		<url-pattern>/frontend/msg/msg.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ReplyServlet</servlet-name>
+		<servlet-class>com.reply.controller.ReplyServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ReplyServlet</servlet-name>
+		<url-pattern>/frontend/reply/reply.do</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- 強禾 -->
+  
+  
+</web-app>

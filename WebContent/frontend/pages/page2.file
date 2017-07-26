@@ -1,0 +1,19 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<table border="0">    
+ <tr>
+  <%if (rowsPerPage<rowNumber) {%>
+    <%if(pageIndex>=rowsPerPage){%>
+        <li><A href="<%=request.getRequestURI()%>?whichPage=<%=whichPage-1%>">上一頁 </A></li>
+    <%}%>
+    <%if(pageIndex<pageIndexArray[pageNumber-1]){%>
+        <li><A href="<%=request.getRequestURI()%>?whichPage=<%=whichPage+1%>">下一頁 </A></li>
+    <%}%>
+  <%}%>  
+ </tr>
+</table>    
+<%if ( pageNumber > 1) {%>
+<table border="0">   
+
+ </tr>
+</table>
+<%}%>

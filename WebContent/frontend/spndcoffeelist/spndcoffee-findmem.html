@@ -1,0 +1,337 @@
+<!DOCTYPE html> 
+<html lang=""> 
+    <head> 
+        <meta charset="utf-8"> 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"> 
+        <title>會員清單</title>         
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"> 
+        <!--[if lt IE 9]>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->         
+        <link rel="stylesheet" href="css/spndcoffee-findmem.css"> 
+        <style type="text/css"> 
+            /**{
+            outline: 1px solid #F00;
+            }*/
+            body {
+            font-family: Microsoft Yahei, Arial, Helvetica, sans-serif, serif;
+            position: relative;
+            }
+		</style>         
+    </head>     
+    <body> 
+        <nav class="navbar navbar-default" role="navigation"> 
+            <div class="container"> 
+                <div class="navbar-header"> 
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"> 
+                        <span class="sr-only">選單切換</span> 
+                        <span class="icon-bar"></span> 
+                        <span class="icon-bar"></span> 
+                        <span class="icon-bar"></span> 
+                    </button>                     
+                    <a class="float-left" href="index.html">
+                        <img src="img/logo/logo-mdpi-36.png">
+                    </a>                     
+                    <a class="navbar-brand" href="index.html">CoffeePuzzle</a> 
+                </div>                 
+                <!-- 手機隱藏選單區 -->                 
+                <div class="collapse navbar-collapse navbar-ex1-collapse"> 
+                    <!-- 左選單 -->                     
+                    <ul class="nav navbar-nav"> 
+                        <li>
+                            <a href="#">最新消息</a>
+                        </li>                         
+                        <li>
+                            <a href="findStore.html">搜尋店家</a>
+                        </li>                         
+                        <li class="active">
+                            <a href="spndcoffee.html">寄杯</a>
+                        </li>                         
+                        <li>
+                            <a href="takeout.html">外帶外送</a>
+                        </li>                         
+                        <li>
+                            <a href="storeProd.html">購物</a>
+                        </li>                         
+                        <li>
+                            <a href="activity.html">活動</a>
+                        </li>                         
+                    </ul>                     
+                    <!-- 右選單 -->                     
+                    <ul class="nav navbar-nav navbar-right"> 
+                        <li>
+                            <a href="#">店家 您好</a>
+                        </li>                         
+                        <li>
+                            <a href="#">登出</a>
+                        </li>                         
+                        <li>
+                            <a href="#">個人設定</a>
+                        </li>                         
+                    </ul>                     
+                </div>                 
+                <!-- 手機隱藏選單區結束 -->                 
+            </div>             
+        </nav>
+        <!-- nav end -->         
+        <div class="container"> 
+            <div class="row"> 
+                <div class="col-xs-12 col-sm-6 col-sm-offset-3"> 
+                    <div class="input-group"> 
+                        <input type="text" class="form-control" placeholder="請輸入會員名稱"> 
+                        <span class="input-group-btn"> <button class="btn btn-cofe" type="button">搜尋</button> </span> 
+                    </div>  
+                                       
+                </div>  
+                
+                    <div class="col-xs-12 col-sm-12">
+                            <ol class="breadcrumb">
+                                <li>寄杯</li>
+                                <li>會員清單</li>
+                                <li class="active">會員詳細資料</li>
+                        
+                            </ol>
+                    </div>               
+                <div class="col-xs-12">
+                    <hr>
+                </div>                 
+            </div>
+            <!-- row end -->             
+        </div>
+        <!-- container end -->         
+        <div class="container-fluid"> 
+            <div class="row"> 
+                <div class="col-xs-12 col-sm-6 col-lg-4"> 
+                    <div class="container-fluid"> 
+                        <div class="row"> 
+                            <div id="addStore" class="col-xs-12 col-sm-6 col-sm-push-6"> 
+                                <a href="#" class="btn btn-custo"><h4>新增店家</h4></a> 
+                            </div>                             
+                            <div class="col-xs-12 col-sm-6 col-sm-pull-6"> 
+                                <h2>會員清單</h2> 
+                            </div>                             
+                        </div>
+                        <!-- row end -->                         
+                    </div>
+                    <!-- container-fluid end -->                     
+                    <div id="list" class="container-fluid"> 
+                        <div class="row header-btn"> 
+                            <div class="col-xs-12"> 
+                                <a id="fav_store" href="#" class="btn btn-custo">瀏覽已收藏店家</a> 
+                            </div>                             
+                        </div>
+                        <!-- row end -->                         
+                        <div class="findStore"> 
+                            <img class="logo float-left margin5px" src="img/logo/logo-hdpi-72.png"> 
+                            <div class="store-info"> 
+                                <div class="store-name">會員名1</div>                                 
+                                會員編號：Yes
+                                <br> 
+                                個人寄杯總數量：Yes
+                                <br> 
+                                剩餘杯數：3
+                            </div>                             
+                            <div style="clear: both;"></div>                             
+                        </div>
+                        <!-- findStore end -->                         
+                        <div class="findStore"> 
+                            <img class="logo float-left margin5px" src="img/logo/logo-hdpi-72.png"> 
+                            <div class="store-info"> 
+                                <div class="store-name">會員名2</div>                                 
+                                會員編號：Yes
+                                <br> 
+                                個人寄杯總數量：Yes
+                                <br> 
+                                剩餘杯數：3
+                            </div>                             
+                            <div style="clear: both;"></div>                             
+                        </div>
+                        <!-- findStore end -->                         
+                        <div class="findStore"> 
+                            <img class="logo float-left margin5px" src="img/logo/logo-hdpi-72.png"> 
+                            <div class="store-info"> 
+                                <div class="store-name">會員名3</div>                                 
+                                會員編號：Yes
+                                <br> 
+                                個人寄杯總數量：Yes
+                                <br> 
+                                剩餘杯數：3
+                            </div>                             
+                            <div style="clear: both;"></div>                             
+                        </div>
+                        <!-- findStore end -->                         
+                        <div class="findStore"> 
+                            <img class="logo float-left margin5px" src="img/logo/logo-hdpi-72.png"> 
+                            <div class="store-info"> 
+                                <div class="store-name">會員名4</div>                                 
+                                會員編號：Yes
+                                <br> 
+                                個人寄杯總數量：Yes
+                                <br> 
+                                剩餘杯數：3
+                            </div>                             
+                            <div style="clear: both;"></div>                             
+                        </div>
+                        <!-- findStore end -->                         
+                        <div class="findStore"> 
+                            <img class="logo float-left margin5px" src="img/logo/logo-hdpi-72.png"> 
+                            <div class="store-info"> 
+                                <div class="store-name">會員名5</div>                                 
+                                會員編號：Yes
+                                <br> 
+                                個人寄杯總數量：Yes
+                                <br> 
+                                剩餘杯數：3
+                            </div>                             
+                            <div style="clear: both;"></div>                             
+                        </div>
+                        <!-- findStore end -->                         
+                        <div class="findStore"> 
+                            <img class="logo float-left margin5px" src="img/logo/logo-hdpi-72.png"> 
+                            <div class="store-info"> 
+                                <div class="store-name">等六個人咖啡</div>                                 
+                                會員編號：Yes
+                                <br> 
+                                個人寄杯總數量：Yes
+                                <br> 
+                                剩餘杯數：3
+                            </div>                             
+                            <div style="clear: both;"></div>                             
+                        </div>
+                        <!-- findStore end -->                         
+                        <div class="findStore"> 
+                            <img class="logo float-left margin5px" src="img/logo/logo-hdpi-72.png"> 
+                            <div class="store-info"> 
+                                <div class="store-name">等七個人咖啡</div>                                 
+                                會員編號：Yes
+                                <br> 
+                                個人寄杯總數量：Yes
+                                <br> 
+                                剩餘杯數：3
+                            </div>                             
+                            <div style="clear: both;"></div>                             
+                        </div>
+                        <!-- findStore end -->                         
+                        <div class="findStore"> 
+                            <img class="logo float-left margin5px" src="img/logo/logo-hdpi-72.png"> 
+                            <div class="store-info"> 
+                                <div class="store-name">等八個人咖啡</div>                                 
+                                會員編號：Yes
+                                <br> 
+                                個人寄杯總數量：Yes
+                                <br> 
+                                剩餘杯數：3
+                            </div>                             
+                            <div style="clear: both;"></div>                             
+                        </div>
+                        <!-- findStore end -->                         
+                        <div class="findStore"> 
+                            <img class="logo float-left margin5px" src="img/logo/logo-hdpi-72.png"> 
+                            <div class="store-info"> 
+                                <div class="store-name">等九個人咖啡</div>                                 
+                                會員編號：Yes
+                                <br> 
+                                個人寄杯總數量：Yes
+                                <br> 
+                                剩餘杯數：3
+                            </div>                             
+                            <div style="clear: both;"></div>                             
+                        </div>
+                        <!-- findStore end -->                         
+                        <div class="findStore"> 
+                            <img class="logo float-left margin5px" src="img/logo/logo-hdpi-72.png"> 
+                            <div class="store-info"> 
+                                <div class="store-name">等十個人咖啡</div>                                 
+                                會員編號：Yes
+                                <br> 
+                                個人寄杯總數量：Yes
+                                <br> 
+                                剩餘杯數：3
+                            </div>                             
+                            <div style="clear: both;"></div>                             
+                        </div>
+                        <!-- findStore end -->                         
+                        <div class="text-center"> 
+                            <ul class="pagination pagination-xs"> 
+                                <li>
+                                    <a href="#">&laquo;</a>
+                                </li>                                 
+                                <li class="active">
+                                    <a href="#">1</a>
+                                </li>                                 
+                                <li>
+                                    <a href="#">2</a>
+                                </li>                                 
+                                <li>
+                                    <a href="#">3</a>
+                                </li>                                 
+                                <li>
+                                    <a href="#">4</a>
+                                </li>                                 
+                                <li>
+                                    <a href="#">5</a>
+                                </li>                                 
+                                <li>
+                                    <a href="#">&raquo;</a>
+                                </li>                                 
+                            </ul>
+                            <!-- pagination -->                             
+                        </div>                         
+                    </div>                     
+                </div>                 
+                <div class="col-xs-12 col-sm-6 "> 
+                    <h3>會員詳細資料</h3> 
+                    <div class=" row-bottom-padded-sm spec_table">
+                        <table class="mem_table"> 
+                            <tr> 
+                                <th>會員名稱</th> 
+                                <td>陳小琪</td>
+                            </tr>                             
+                            <tr> 
+                                <th>會員編號</th> 
+                                <td>MEM00000001</td> 
+                            </tr>                             
+                            <tr> 
+                                <th>寄杯商品</th> 
+                                <td>大杯摩卡冰沙</td> 
+                            </tr>                             
+                            <tr> 
+                                <th>個人寄杯總數量</th> 
+                                <td>10</td> 
+                            </tr>                             
+                            <tr> 
+                                <th>剩餘杯數</th> 
+                                <td>4</td> 
+                            </tr>                             
+                                                    
+                        </table>                         
+                    </div>                     
+                </div>                 
+            </div>
+            <!-- row end -->             
+        </div>
+        <!-- container-fluid end -->         
+        <script src="https://code.jquery.com/jquery.js"></script>         
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>         
+        <script src="http://maps.google.com/maps/api/js"></script>         
+        <script src="js/maps.js"></script>         
+        <script src="js/mapAutoHeight.js"></script>         
+        <script type="text/javascript">
+			$(document).ready(function () {
+
+				var list_top = $("#list").offset().top;
+				var ready_win_height = $(window).height();
+
+		        $("#list").css("height", (ready_win_height - list_top));
+
+		        $(window).resize(function () {
+
+		            var resize_win_height = $(window).height();
+		        	$("#list").css("height", (resize_win_height - list_top));
+		        });
+		    });
+		</script>         
+    </body>     
+</html>
